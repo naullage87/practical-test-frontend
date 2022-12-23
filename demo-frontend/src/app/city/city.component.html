@@ -1,0 +1,24 @@
+<div class="example-header">
+    <input
+      type="text"
+      id="filter-text-box"
+      placeholder="Search..."
+      (input)="onFilterTextBoxChanged()"
+    />
+ 
+  </div>
+<ag-grid-angular 
+    style="width: 100%; height: 400px;"
+    class="ag-theme-dark"
+    [columnDefs]="columnDefs"
+    [rowHeight]=100
+    [rowSelection]="rowSelection"
+    [rowGroupPanelShow]="rowGroupPanelShow"
+    (cellValueChanged)="onCellValueChanged($event)"
+    (gridReady)="onGridReady($event)"  
+    [enableRangeSelection]="true"
+    [paginationAutoPageSize]="paginationPageSize"  
+    [pagination]="true"
+    >
+
+</ag-grid-angular>
